@@ -27,7 +27,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 2rem;
+  font-size: 3rem;
 
   padding: 3rem 20rem;
 }
@@ -44,7 +44,7 @@ header {
 
 .landing--page__name {
   text-align: center;
-  font-size: 4rem;
+  font-size: 5rem;
 }
 
 .landing--page__buttons {
@@ -52,10 +52,10 @@ header {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  font-size: 1.5rem;
-  font-weight: bolder;
+  font-size: 2rem;
+  font-weight: bold;
   padding: 0 20rem;
-  margin-top: 12rem;
+  margin-top: 18rem;
 }
 
 /* BUTTONS */
@@ -64,9 +64,9 @@ header {
 .btn:visited {
   text-decoration: none;
   background-color: #fff;
-  border-radius: 2.5rem;
-  padding: 1rem;
-  width: 18rem;
+  border-radius: 4rem;
+  padding: 2rem;
+  width: 24rem;
 
   display: flex;
   align-items: center;
@@ -79,13 +79,13 @@ header {
 }
 
 .btn--blue {
-  border: 3px solid #0077b5;
+  border: 4px solid #0077b5;
   color: #0077b5;
 }
 
 figure img {
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
 }
 
 /* MAIN ABOUT ME*/
@@ -100,15 +100,15 @@ figure img {
 
 .main--text__name {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 15rem;
 }
 
 .main--text__paragraph {
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-align: left;
-  padding: 0 35rem 4rem 35rem;
+  padding: 0 40rem 14rem 40rem;
 }
 
 /* MAIN TECH STACK */
@@ -121,34 +121,34 @@ figure img {
 }
 
 .tech--stack__images img {
-  width: 6rem;
+  width: 8rem;
 }
 
 /* MAIN PROJECTS PART */
 
 .projects {
   background: radial-gradient(#688dd1, #113b75);
-  padding: 10rem 2rem;
+  padding: 15rem 2rem;
 }
 
 .projects--header {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   margin-bottom: 15rem;
 }
 
 .projects--list__name {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 3rem;
   text-transform: uppercase;
-  margin-bottom: 7rem;
+  padding-bottom: 18rem;
 }
 
 .projects--list__item {
   display: flex;
   justify-content: space-around;
-  padding: 3rem 15rem 15rem 15rem;
+  padding: 3rem 15rem 35rem 15rem;
 }
 
 .projects--list__item:last-child {
@@ -157,17 +157,17 @@ figure img {
 
 .projects--list__image img {
   border-radius: 10rem;
-  width: 40rem;
-  height: 28rem;
+  width: 60rem;
+  height: 40rem;
 }
 
 .projects--list__writing {
-  font-size: 2rem;
+  font-size: 3rem;
   width: 45%;
 }
 
 .projects--list__writing p {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
 
 .project--list__logos {
@@ -178,11 +178,11 @@ figure img {
 }
 
 .project--list__logos-main1 img {
-  height: 6rem;
+  height: 8rem;
 }
 
 .project--list__logos-main2 img {
-  height: 4rem;
+  height: 6rem;
 }
 
 /* FOOTER */
@@ -190,14 +190,13 @@ figure img {
 .footer {
   background: radial-gradient(#244fa0, #006879);
   opacity: 0.85;
-  height: 4rem;
+  height: 5rem;
 }
 
 .footer p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  font-size: 1.5rem;
+  line-height: 5rem;
+  text-align: center;
   text-transform: uppercase;
-  height: 4rem;
   font-weight: bolder;
 }
