@@ -21,41 +21,45 @@ header {
   height: 100vh;
   text-transform: uppercase;
   background: linear-gradient(to bottom, #32196d, #3761b1);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .navigation {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-around;
+
   font-size: 3rem;
 
-  padding: 3rem 20rem;
+  margin-top: 5rem;
 }
 
-.navigation a,
-.footer a {
+.navigation a {
   text-decoration: none;
   color: #fff;
 }
 
 .landing--page {
-  padding: 20rem 0;
-}
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.landing--page__name {
-  text-align: center;
   font-size: 5rem;
 }
 
 .landing--page__buttons {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+
   font-size: 2rem;
   font-weight: bold;
-  padding: 0 20rem;
-  margin-top: 18rem;
+
+  margin-bottom: 10rem;
 }
 
 /* BUTTONS */
@@ -68,11 +72,12 @@ header {
   padding: 2rem;
   width: 24rem;
 
+  margin: 0 4rem;
+
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
-
 .btn--black {
   border: 2px solid black;
   color: rgb(0, 0, 0);
@@ -92,89 +97,85 @@ figure img {
 .main {
   background: linear-gradient(to bottom, #2e578f, #458eb8);
   height: 100vh;
-}
-
-.main--text {
-  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .main--text__name {
-  text-align: center;
   font-size: 3rem;
   text-transform: uppercase;
-  margin-bottom: 15rem;
+  margin-top: 10rem;
 }
 
 .main--text__paragraph {
   font-size: 3rem;
-  text-align: left;
-  padding: 0 40rem 14rem 40rem;
+  width: 60%;
 }
 
-/* MAIN TECH STACK */
-
-.tech--stack__images {
+.tech--stack {
+  width: 100%;
+  background-color: #fff;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
-  background-color: #ebefff;
+  flex-wrap: wrap;
 }
 
-.tech--stack__images img {
-  width: 8rem;
-}
-
-/* MAIN PROJECTS PART */
+/* PROJECTS */
 
 .projects {
   background: radial-gradient(#688dd1, #113b75);
-  padding: 15rem 2rem;
-}
 
-.projects--header {
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  margin-bottom: 15rem;
-}
-
-.projects--list__name {
-  text-align: center;
-  font-size: 3rem;
-  text-transform: uppercase;
-  padding-bottom: 18rem;
-}
-
-.projects--list__item {
   display: flex;
-  justify-content: space-around;
-  padding: 3rem 15rem 35rem 15rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.projects--list__item:last-child {
-  padding: 3rem 15rem 10rem 15rem;
+.project {
+  margin: 25rem 0rem;
 }
 
-.projects--list__image img {
+.project--list__name {
+  display: flex;
+  justify-content: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+}
+
+.project--list__item {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project--list__item-image img {
   border-radius: 10rem;
   width: 60rem;
   height: 40rem;
 }
 
-.projects--list__writing {
+.project--list__item-writing {
   font-size: 3rem;
-  width: 45%;
+  width: 40%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.projects--list__writing p {
-  margin: 3rem 0;
+.project--list__item-writing p {
+  margin-bottom: 5rem;
 }
 
 .project--list__logos {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 80%;
 }
 
 .project--list__logos-main1 img {
@@ -186,17 +187,19 @@ figure img {
 }
 
 /* FOOTER */
-
 .footer {
-  background: radial-gradient(#244fa0, #006879);
-  opacity: 0.85;
-  height: 5rem;
+  background: radial-gradient(#688dd1, #006879);
 }
 
 .footer p {
-  font-size: 1.5rem;
-  line-height: 5rem;
   text-align: center;
+  line-height: 3rem;
+}
+
+.footer a {
   text-transform: uppercase;
-  font-weight: bolder;
+  text-align: center;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
 }
