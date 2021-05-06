@@ -1,0 +1,81 @@
+//variables
+$orange: #fcb47a;
+$project-background: radial-gradient(#688dd1, #113b75);
+
+
+
+//base
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-size: 62.5%;
+    // 10px = 1rem 
+  }
+
+  body {
+    font-family: "Lato", serif;
+    /* font-family: "Candal", sans-serif; */
+    line-height: 1.5;
+    color: #fff;
+    letter-spacing: 0.2rem;
+  }
+
+
+  // media queries
+@media screen and (max-width: 1366px) {
+  html {
+    font-size: 56.25%;
+  // 9px = 1rem 
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 50%;
+  // 8px = 1rem 
+  }
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 43.75%;
+  // 7px = 1rem 
+  }
+}
+
+@media screen and (max-width: 854px) {
+  html {
+    font-size: 43.75%;
+  // 7px = 1rem 
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 37.5%;
+  // 6px = 1rem 
+  }
+}
+// mobile
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 56.25%;
+  // 9px = 1rem 
+  }
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 43.75%;
+  // 7px = 1rem 
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 37.5%;
+  // 6px = 1rem 
+  }
+}
