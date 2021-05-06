@@ -88,12 +88,15 @@
 
 .project:last-child {
     position: relative;
-
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     h2 {
         padding: 1rem;
         font-size: 3rem;
         text-align: center;
+    height: 10vh;
         width: 100%;
         background-color: #fcb47a;
         position: absolute;
@@ -370,6 +373,7 @@ span {
     }
     
     .project:last-child {
+
         h2 {
             padding: 1rem;
             font-size: 2rem;
