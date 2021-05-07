@@ -58,17 +58,17 @@ $project-background: radial-gradient(#688dd1, #113b75);
   // 9px = 1rem 
   }
  }
-// @media screen and (max-width: 360px) {
-//   html {
-//     font-size: 43.75%;
-//   // 7px = 1rem 
-//   }
-// }
-// @media screen and (max-width: 320px) {
-//   html {
-//     font-size: 37.5%;
-//   // 6px = 1rem 
-//   }
-// }
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 43.75%;
+  // 7px = 1rem 
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 37.5%;
+  // 6px = 1rem 
+  }
+}
 
 

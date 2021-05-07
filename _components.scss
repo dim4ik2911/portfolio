@@ -85,10 +85,6 @@
     height: 6rem;
 }
 
-//javascript plugin
-
-
-
 // media queries
 @media screen and (max-width: 1024px) {
 
@@ -203,15 +199,82 @@
 // mobile
 
 @media screen and (max-width: 480px) {
+   //get in touch button on top
+#get-in-touch {
+    font-size: 3.5rem;
+    border: 3px solid #fcb47a;
+}
+  
+
+//buttons on landing page
+.btn:link,
+.btn:visited {
+  
+  padding: 1.5rem;
+  width: 18rem;
+  margin: 1rem;
+
+}
+
+.btn:active,
+.btn:hover {
+  transform: translateY(-3px);
+}
+.btn--black {
+  border: 3px solid black;
+
+}
+
+.btn--blue {
+  border: 3px solid #03a7ff;
+
+}
+
+.btn img {
+    height: 3rem;
+    width: 3rem;
+}
+//project 
+.project__structure--image img {
+    border-radius: 10rem;
+    width: 40rem;
+    height: 25rem;
+}
+  
+.project__structure--writing {
+    width: 40rem;
+    height: 25rem;
+}
+
+.right__text {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.right__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.right__logos--main1 img {
+    height: 6rem;
+}
+  
+.right__logos--main2 img {
+    height: 4rem;
+}
+
 }
 
 
 
-@media screen and (max-width: 360px) {
-}
+// @media screen and (max-width: 360px) {
+// }
 
 
 
-@media screen and (max-width: 320px) {
+// @media screen and (max-width: 320px) {
 
-}
+// }

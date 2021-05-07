@@ -36,6 +36,16 @@ body {
     font-size: 56.25%;
   }
 }
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 37.5%;
+  }
+}
 header {
   text-transform: uppercase;
   background: linear-gradient(to bottom, #2f1866, #3761b1);
@@ -109,16 +119,17 @@ header {
 }
 
 .project {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20rem 0;
 }
 .project__name {
   font-size: 5rem;
   text-transform: uppercase;
   text-align: center;
+  padding: 5rem 0;
 }
 .project__structure {
   display: flex;
@@ -135,9 +146,18 @@ header {
 
 @media screen and (max-width: 1024px) {
   .landing-page__navigation a {
-    font-size: 3rem;
+    font-size: 2rem;
     padding: 0.3rem 0.6rem;
     border-bottom: 3px solid transparent;
+  }
+
+  .project {
+    padding: 15rem 0;
+  }
+}
+@media screen and (max-width: 854px) {
+  .project {
+    padding: 10rem 0;
   }
 }
 @media screen and (max-width: 640px) {
@@ -169,6 +189,62 @@ header {
     background-color: #fcb47a;
     text-align: center;
     font-size: 2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .landing-page__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing-page__navigation a:not(#get-in-touch) {
+    display: none;
+  }
+  .landing-page__naming {
+    text-align: center;
+    font-size: 3rem;
+    margin: 15rem 0 10rem 0;
+  }
+  .landing-page__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+  }
+
+  .main__name {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 8rem;
+  }
+  .main__paragraph {
+    font-size: 3rem;
+    width: 90%;
+    margin: 8rem 0;
+  }
+  .main__tech-stack {
+    flex-wrap: wrap;
+  }
+  .main__tech-stack img {
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .project {
+    padding: 10rem 0;
+  }
+  .project__name {
+    font-size: 3rem;
+    padding: 5rem 0;
+  }
+  .project__structure {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer {
+    font-size: 1rem;
   }
 }
 #get-in-touch {
@@ -352,5 +428,67 @@ header {
 
   .right__logos--main2 img {
     height: 6rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  #get-in-touch {
+    font-size: 3.5rem;
+    border: 3px solid #fcb47a;
+  }
+
+  .btn:link,
+.btn:visited {
+    padding: 1.5rem;
+    width: 18rem;
+    margin: 1rem;
+  }
+
+  .btn:active,
+.btn:hover {
+    transform: translateY(-3px);
+  }
+
+  .btn--black {
+    border: 3px solid black;
+  }
+
+  .btn--blue {
+    border: 3px solid #03a7ff;
+  }
+
+  .btn img {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .project__structure--image img {
+    border-radius: 10rem;
+    width: 40rem;
+    height: 25rem;
+  }
+
+  .project__structure--writing {
+    width: 40rem;
+    height: 25rem;
+  }
+
+  .right__text {
+    font-size: 2rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .right__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right__logos--main1 img {
+    height: 6rem;
+  }
+
+  .right__logos--main2 img {
+    height: 4rem;
   }
 }

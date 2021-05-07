@@ -89,16 +89,17 @@ header {
   background: radial-gradient(#688dd1, #113b75);
 }
 .project {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  padding: 20rem 0;
 
   &__name {
     font-size: 5rem;
     text-transform: uppercase;
     text-align: center;
+    padding: 5rem 0;
   }
   
   &__structure {
@@ -129,14 +130,23 @@ header {
 
     &__navigation {
       a {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 0.3rem 0.6rem;
         border-bottom: 3px solid transparent;
         }
     }
   }
+  //projects
+  .project {
+    padding: 15rem 0;
+  }
 }
-// @media screen and (max-width: 854px) {}
+@media screen and (max-width: 854px) {
+  //projects
+  .project {
+    padding: 10rem 0;
+  }
+}
 @media screen and (max-width: 640px) {
   //landing page
   .landing-page {
@@ -183,6 +193,86 @@ header {
 
 
 // mobile
-// @media screen and (max-width: 480px) {}
+@media screen and (max-width: 480px) {
+
+//landing page
+.landing-page {
+
+&__navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+  a:not(#get-in-touch) {
+    // font-size: 2rem;
+    // padding: 0.4rem 0.8rem;
+    // border-bottom: 2px solid transparent;
+    // transition: border-bottom 0.4s;
+    display: none;
+  }
+}
+
+&__naming {
+  text-align:center;
+  font-size: 3rem;
+  margin: 15rem 0 10rem 0;
+}
+&__buttons {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+font-size: 1.4rem;
+
+}
+
+}
+// main
+.main {
+
+&__name {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-top: 8rem;
+}
+
+&__paragraph {
+  font-size: 3rem;
+  width: 90%;
+  margin: 8rem 0;
+}
+
+&__tech-stack {
+  flex-wrap: wrap;
+  img {
+    width: 8rem;
+    height: 8rem;
+  }
+}
+}
+
+//projects
+.project {
+
+padding: 10rem 0;
+
+&__name {
+  font-size: 3rem;
+  padding: 5rem 0;
+}
+
+&__structure {
+  display: flex;
+  justify-content: space-between;
+}
+}
+//footer
+.footer {
+font-size: 1rem;
+}
+
+
+}
 // @media screen and (max-width: 360px) {}
 // @media screen and (max-width: 320px) {}
