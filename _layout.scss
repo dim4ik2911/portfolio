@@ -81,6 +81,23 @@ header {
       width: 9rem;
       height: 9rem;
     }
+
+    .odd {
+      animation: rotate 3s linear infinite;
+    }
+    .even {
+      animation: rotate 3s linear reverse infinite;
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+
+  to {
+      transform: rotate(360deg);
   }
 }
 
@@ -112,14 +129,12 @@ header {
   }
 }
 //footer
-.footer {
+#footer {
   width:100%;
   background-color: #fcb47a;
-  text-align: center;
   font-size: 1.5rem;
+  text-align: center;
 }
-
-
 
 
 // media queries
@@ -248,6 +263,8 @@ font-size: 1.4rem;
   img {
     width: 8rem;
     height: 8rem;
+
+    animation: rotate 2s ;
   }
 }
 }

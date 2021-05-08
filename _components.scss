@@ -9,11 +9,23 @@
     transform: scale(1);
     transition: transform 0.4s;
 
-    &:hover {
+    animation: beats 1.5s linear infinite;
+
+    // &:hover {
+    //     transform: scale(1.1);
+    // }
+}
+@keyframes beats {
+    0% {
+        transform: scale(1);
+    }
+    50% {
         transform: scale(1.1);
     }
+    100% {
+        transform: scale(1);
+    }
 }
-
 //buttons on landing page
 .btn:link,
 .btn:visited {
