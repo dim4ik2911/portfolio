@@ -16,12 +16,12 @@ body {
   letter-spacing: 0.2rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1070px) {
   html {
     font-size: 50%;
   }
 }
-@media screen and (max-width: 854px) {
+@media screen and (max-width: 870px) {
   html {
     font-size: 43.75%;
   }
@@ -113,21 +113,7 @@ header {
   width: 9rem;
   height: 9rem;
 }
-.main__tech-stack .odd {
-  animation: rotate 3s linear infinite;
-}
-.main__tech-stack .even {
-  animation: rotate 3s linear reverse infinite;
-}
 
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 .projects {
   background: radial-gradient(#688dd1, #113b75);
 }
@@ -152,31 +138,73 @@ header {
 }
 
 #footer {
-  width: 100%;
   background-color: #fcb47a;
-  font-size: 1.5rem;
+  color: #fff;
+  font-size: 3.5rem;
   text-align: center;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1570px) {
   .landing-page__navigation a {
-    font-size: 2rem;
-    padding: 0.3rem 0.6rem;
-    border-bottom: 3px solid transparent;
+    font-size: 3.5rem;
   }
 
   .project {
     padding: 15rem 0;
   }
 }
-@media screen and (max-width: 854px) {
+@media screen and (max-width: 1370px) {
+  .landing-page__navigation a {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 1170px) {
+  .landing-page__navigation a {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 1070px) {
+  .landing-page__navigation a {
+    font-size: 2rem;
+    padding: 0.3rem 0.6rem;
+    border-bottom: 3px solid transparent;
+  }
+}
+@media screen and (max-width: 870px) {
+  .main__tech-stack {
+    flex-wrap: wrap;
+  }
+  .main__tech-stack img {
+    margin: 0 4.2rem;
+    width: 10rem;
+    height: 10rem;
+  }
+
   .project {
     padding: 10rem 0;
   }
 }
+@media screen and (max-width: 773px) {
+  .main__name {
+    font-size: 3rem;
+    margin-top: 5rem;
+  }
+  .main__paragraph {
+    font-size: 3rem;
+    margin: 5rem 0;
+  }
+  .main__tech-stack img {
+    width: 7.5rem;
+    height: 7.5rem;
+  }
+
+  .project__name {
+    font-size: 3rem;
+  }
+}
 @media screen and (max-width: 640px) {
   .landing-page__navigation a {
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-bottom: 2px solid transparent;
   }
   .landing-page__naming {
@@ -195,14 +223,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 80%;
-  }
-
-  .footer {
-    width: 100%;
-    background-color: #fcb47a;
-    text-align: center;
-    font-size: 2rem;
+    height: 100%;
   }
 }
 @media screen and (max-width: 480px) {
@@ -237,13 +258,9 @@ header {
     width: 90%;
     margin: 8rem 0;
   }
-  .main__tech-stack {
-    flex-wrap: wrap;
-  }
   .main__tech-stack img {
-    width: 8rem;
-    height: 8rem;
-    animation: rotate 2s;
+    width: 6rem;
+    height: 6rem;
   }
 
   .project {
@@ -258,8 +275,8 @@ header {
     justify-content: space-between;
   }
 
-  .footer {
-    font-size: 1rem;
+  #footer {
+    font-size: 2rem;
   }
 }
 #get-in-touch {
@@ -324,6 +341,9 @@ header {
   border-radius: 10rem;
   width: 80rem;
   height: 50rem;
+  box-shadow: 8px 9px 0px 0px rgba(17, 59, 117, 0.75);
+  -webkit-box-shadow: 8px 9px 0px 0px rgba(17, 59, 117, 0.75);
+  -moz-box-shadow: 8px 9px 0px 0px rgba(17, 59, 117, 0.75);
 }
 
 .project__structure--writing {
@@ -346,13 +366,29 @@ header {
 
 .right__logos--main1 img {
   height: 9rem;
+  animation: beats 1.5s linear infinite;
 }
 
 .right__logos--main2 img {
   height: 6rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1700px) {
+  .project__structure--image img {
+    width: 70rem;
+    height: 43.75rem;
+  }
+
+  .project__structure--writing {
+    width: 70rem;
+    height: 43.75rem;
+  }
+
+  .right__text {
+    font-size: 3.3rem;
+  }
+}
+@media screen and (max-width: 1470px) {
   #get-in-touch {
     font-size: 3.5rem;
   }
@@ -379,9 +415,8 @@ header {
     height: 5rem;
   }
 }
-@media screen and (max-width: 854px) {
+@media screen and (max-width: 1270px) {
   .project__structure--image img {
-    border-radius: 10rem;
     width: 50rem;
     height: 31.25rem;
   }
@@ -392,7 +427,7 @@ header {
   }
 
   .right__text {
-    font-size: 2.2rem;
+    font-size: 2.3rem;
   }
 
   .right__logos--main1 img {
@@ -403,7 +438,40 @@ header {
     height: 4rem;
   }
 }
+@media screen and (max-width: 773px) {
+  .project__structure--image img {
+    border-radius: 10rem;
+    width: 40rem;
+    height: 25rem;
+    box-shadow: 4px 5px 0px 0px rgba(17, 59, 117, 0.75);
+    -webkit-box-shadow: 4px 5px 0px 0px rgba(17, 59, 117, 0.75);
+    -moz-box-shadow: 4px 5px 0px 0px rgba(17, 59, 117, 0.75);
+  }
+
+  .project__structure--writing {
+    width: 40rem;
+    height: 25rem;
+  }
+
+  .right__text {
+    font-size: 1.8rem;
+  }
+
+  .right__logos--main1 img {
+    height: 6rem;
+  }
+
+  .right__logos--main2 img {
+    height: 3rem;
+  }
+}
 @media screen and (max-width: 640px) {
+  #get-in-touch {
+    font-size: 3rem;
+    color: #fcb47a;
+    border: 3px solid #fcb47a;
+  }
+
   .btn:link,
 .btn:visited {
     padding: 1.5rem;
@@ -431,15 +499,18 @@ header {
   .project__structure--image img {
     width: 60rem;
     height: 37.5rem;
+    margin-bottom: 4rem;
   }
 
   .project__structure--writing {
     width: 60rem;
     height: 37.5rem;
+    text-align: center;
   }
 
   .right__text {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 
   .right__logos {

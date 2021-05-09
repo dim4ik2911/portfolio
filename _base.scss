@@ -26,7 +26,7 @@ $project-background: radial-gradient(#688dd1, #113b75);
 
 // media queries
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1070px) {
   html {
     font-size: 50%;
   // 8px = 1rem 
@@ -34,7 +34,7 @@ $project-background: radial-gradient(#688dd1, #113b75);
 }
 
 
-@media screen and (max-width: 854px) {
+@media screen and (max-width: 870px) {
   html {
     font-size: 43.75%;
   // 7px = 1rem 
