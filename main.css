@@ -31,7 +31,7 @@ body {
     font-size: 37.5%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 526px) {
   html {
     font-size: 56.25%;
   }
@@ -226,7 +226,13 @@ header {
     height: 100%;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 573px) {
+  .main__tech-stack img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media screen and (max-width: 526px) {
   .landing-page__navigation {
     display: flex;
     flex-direction: column;
@@ -254,13 +260,13 @@ header {
     margin-top: 8rem;
   }
   .main__paragraph {
-    font-size: 3rem;
+    font-size: 2.5rem;
     width: 90%;
     margin: 8rem 0;
   }
   .main__tech-stack img {
-    width: 6rem;
-    height: 6rem;
+    width: 5rem;
+    height: 5rem;
   }
 
   .project {
@@ -525,7 +531,7 @@ header {
     height: 6rem;
   }
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 526px) {
   #get-in-touch {
     font-size: 3.5rem;
     border: 3px solid #fcb47a;
