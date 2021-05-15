@@ -51,17 +51,18 @@ header {
   background: linear-gradient(to bottom, #2f1866, #3761b1);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  overflow: hidden;
 }
 
 .landing-page__navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .landing-page__navigation a {
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-decoration: none;
   color: #fff;
   padding: 0.4rem 0.8rem;
@@ -73,16 +74,8 @@ header {
 }
 .landing-page__naming {
   text-align: center;
-  font-size: 6rem;
-  margin: 20rem 0;
-}
-.landing-page__buttons {
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 10rem;
-  font-size: 1.8rem;
-  font-weight: bold;
+  font-size: 7rem;
+  margin: 15rem 0 10rem 0;
 }
 
 .main {
@@ -93,12 +86,13 @@ header {
   justify-content: space-between;
 }
 .main__name {
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 .main__paragraph {
-  font-size: 4rem;
+  text-align: center;
+  font-size: 4.5rem;
   width: 60%;
   margin: 15rem 0;
 }
@@ -110,8 +104,9 @@ header {
   align-items: center;
 }
 .main__tech-stack img {
-  width: 9rem;
-  height: 9rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 2.5rem auto;
 }
 
 .projects {
@@ -129,19 +124,35 @@ header {
   font-size: 5rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 .project__structure {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
+.project:last-child {
+  padding: 20rem 0 40rem 0;
+}
 
-#footer {
-  background-color: #fcb47a;
-  color: #fff;
+.footer {
+  background: radial-gradient(#f6e2d2, #fba055);
   font-size: 3.5rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__naming {
+  color: #fff;
+  font-size: 10rem;
   text-align: center;
+}
+.footer__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
 }
 
 @media screen and (max-width: 1570px) {
@@ -286,15 +297,21 @@ header {
   }
 }
 #get-in-touch {
-  font-size: 4.5rem;
+  font-size: 5rem;
   color: #fcb47a;
   border: 4px solid #fcb47a;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
 }
 
 #get-in-touch-coding {
   transform: scale(1);
   transition: transform 0.4s;
   animation: beats 1.5s linear infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20rem;
 }
 
 @keyframes beats {
@@ -311,15 +328,10 @@ header {
 .btn:link,
 .btn:visited {
   text-decoration: none;
-  background-color: #fff;
-  border-radius: 4rem;
-  padding: 2rem;
-  width: 22rem;
-  margin: 0 2rem;
-  letter-spacing: 0rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
+  margin: 0rem 10rem;
+  border: 5px solid #fff;
+  padding: 0.5rem;
+  border-radius: 3rem;
   transition: transform 0.4s;
 }
 
@@ -328,19 +340,9 @@ header {
   transform: translateY(-5px);
 }
 
-.btn--black {
-  border: 4px solid black;
-  color: black;
-}
-
-.btn--blue {
-  border: 4px solid #03a7ff;
-  color: #00a6ff;
-}
-
 .btn img {
-  height: 4rem;
-  width: 4rem;
+  height: 10rem;
+  width: 10rem;
 }
 
 .project__structure--image img {
@@ -362,21 +364,22 @@ header {
 
 .right__text {
   font-size: 3.5rem;
+  text-align: center;
 }
 
 .right__logos {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
 .right__logos--main1 img {
-  height: 9rem;
+  height: 10rem;
   animation: beats 1.5s linear infinite;
 }
 
 .right__logos--main2 img {
-  height: 6rem;
+  height: 7rem;
 }
 
 @media screen and (max-width: 1700px) {
