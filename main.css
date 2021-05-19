@@ -207,7 +207,7 @@ header {
   border-radius: 10rem;
   width: 80rem;
   height: 50rem;
-  box-shadow: 0rem 2rem 2rem 0 rgba(0, 0, 0, 0.75);
+  box-shadow: 0rem 2rem 2rem 0 #113b75;
 }
 
 .project__structure--writing {
