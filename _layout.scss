@@ -3,11 +3,11 @@
 header {
   text-transform: uppercase;
   background: linear-gradient(to bottom, #2f1866, #3761b1);
+  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
-  min-height: 100vh;
 }
 // * {
 //   border: 1px solid red !important;
@@ -19,10 +19,10 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    margin-top: 2.5rem;
+    margin: 2.5rem;
 
     a {
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       text-decoration: none;
       color: #fff;
       border-bottom: 3px solid transparent;
@@ -37,30 +37,30 @@ header {
   &__naming {
     text-align: center;
     font-size: 2rem;
-    margin-top: 12rem;
   }
 }
 
 // main
 .main {
   background: linear-gradient(to bottom, #2e578f, #458eb8);
-  // height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
 
   &__name {
     font-size: 1.5rem;
     text-transform: uppercase;
-    margin-top: 7.5rem;
+    margin: 7.5rem 0 3.5rem 0;
+    text-align: center;
   }
 
   &__paragraph {
     text-align: center;
     font-size: 1.6rem;
     width: 95%;
+    margin: 5rem 0 10rem 0;
   }
 
   &__tech-stack {
@@ -132,7 +132,7 @@ header {
     .btn:visited {
       text-decoration: none;
       margin: 0rem 2rem;
-      border: 2px solid #fff;
+      border: 0.2rem solid #fff;
       padding: 0.3rem;
       border-radius: 15px;
       transition: transform 0.4s;
@@ -150,10 +150,11 @@ header {
 }
 
 // media queries
-// @media screen and (max-width: 480px) {
-//   .main {
-//     // &__paragraph {
-//     //   font-size: 1.4rem;
-//     // }
-//   }
-// }
+@media screen and (min-width: 1025px) {
+  .project {
+    &__structure {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+}

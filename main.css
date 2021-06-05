@@ -15,29 +15,69 @@ body {
   letter-spacing: 0.2rem;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 480px) {
   html {
-    font-size: 75%;
+    font-size: 87.5%;
+  }
+}
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 801px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  html {
+    font-size: 137.5%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  html {
+    font-size: 137.5%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  html {
+    font-size: 156.25%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  html {
+    font-size: 175%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 187.5%;
   }
 }
 header {
   text-transform: uppercase;
   background: linear-gradient(to bottom, #2f1866, #3761b1);
+  overflow: hidden;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  overflow: hidden;
-  min-height: 100vh;
 }
 
 .landing-page__navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  margin-top: 2.5rem;
+  margin: 2.5rem;
 }
 .landing-page__navigation a {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-decoration: none;
   color: #fff;
   border-bottom: 3px solid transparent;
@@ -49,26 +89,27 @@ header {
 .landing-page__naming {
   text-align: center;
   font-size: 2rem;
-  margin-top: 12rem;
 }
 
 .main {
   background: linear-gradient(to bottom, #2e578f, #458eb8);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100vh;
 }
 .main__name {
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin-top: 7.5rem;
+  margin: 7.5rem 0 3.5rem 0;
+  text-align: center;
 }
 .main__paragraph {
   text-align: center;
   font-size: 1.6rem;
   width: 95%;
+  margin: 5rem 0 10rem 0;
 }
 .main__tech-stack {
   width: 100%;
@@ -133,7 +174,7 @@ header {
 .footer__buttons .btn:visited {
   text-decoration: none;
   margin: 0rem 2rem;
-  border: 2px solid #fff;
+  border: 0.2rem solid #fff;
   padding: 0.3rem;
   border-radius: 15px;
   transition: transform 0.4s;
@@ -147,6 +188,12 @@ header {
   width: 2.5rem;
 }
 
+@media screen and (min-width: 1025px) {
+  .project__structure {
+    flex-direction: row;
+    width: 100%;
+  }
+}
 #get-in-touch {
   font-size: 1.5rem;
   color: #fcb47a;
@@ -162,7 +209,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 16rem;
+  margin: 2.5rem 0 5rem 0;
 }
 
 @keyframes beats {
@@ -213,4 +260,24 @@ header {
 .right__logos--main2 img {
   height: 3rem;
   margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1025px) {
+  .project__structure--writing {
+    margin-top: 0rem;
+  }
+
+  .right__text {
+    font-size: 0.9rem;
+  }
+
+  .right__logos--main1 img {
+    height: 3.5rem;
+    margin-top: 0rem;
+  }
+
+  .right__logos--main2 img {
+    height: 2rem;
+    margin-bottom: 0rem;
+  }
 }
