@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", serif;
+  line-height: 1.5;
+  color: #fff;
+  letter-spacing: 0.2rem;
+}
+
+@media screen and (max-width: 1070px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (max-width: 870px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 37.5%;
+  }
+}
+@media screen and (max-width: 526px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 37.5%;
+  }
+}

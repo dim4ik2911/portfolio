@@ -15,56 +15,26 @@ body {
   letter-spacing: 0.2rem;
 }
 
-@media screen and (max-width: 1070px) {
-  html {
-    font-size: 50%;
-  }
-}
-@media screen and (max-width: 870px) {
-  html {
-    font-size: 43.75%;
-  }
-}
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 37.5%;
-  }
-}
-@media screen and (max-width: 526px) {
-  html {
-    font-size: 56.25%;
-  }
-}
-@media screen and (max-width: 360px) {
-  html {
-    font-size: 43.75%;
-  }
-}
-@media screen and (max-width: 320px) {
-  html {
-    font-size: 37.5%;
-  }
-}
 header {
   text-transform: uppercase;
   background: linear-gradient(to bottom, #2f1866, #3761b1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .landing-page__navigation {
   display: grid;
   grid-template-columns: 1fr 1fr;
   text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 5rem;
+  margin-top: 2.5rem;
 }
 .landing-page__navigation a {
-  font-size: 4.5rem;
+  font-size: 1.2rem;
   text-decoration: none;
   color: #fff;
-  padding: 0.4rem 0.8rem;
   border-bottom: 3px solid transparent;
   transition: border-bottom 0.4s;
 }
@@ -73,8 +43,8 @@ header {
 }
 .landing-page__naming {
   text-align: center;
-  font-size: 7rem;
-  margin: 15rem 0 10rem 0;
+  font-size: 2rem;
+  margin-top: 12rem;
 }
 
 .main {
@@ -83,17 +53,17 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  min-height: 100vh;
 }
 .main__name {
-  font-size: 4.5rem;
+  font-size: 1.5rem;
   text-transform: uppercase;
-  margin-top: 15rem;
+  margin-top: 7.5rem;
 }
 .main__paragraph {
   text-align: center;
-  font-size: 4.5rem;
-  width: 60%;
-  margin: 15rem 0;
+  font-size: 1.6rem;
+  width: 100%;
 }
 .main__tech-stack {
   width: 100%;
@@ -103,9 +73,9 @@ header {
   align-items: center;
 }
 .main__tech-stack img {
-  width: 10rem;
-  height: 10rem;
-  margin: 2.5rem auto;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem auto;
 }
 
 .projects {
@@ -117,45 +87,63 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20rem 0;
+  padding-top: 15rem;
 }
 .project__name {
-  font-size: 5rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 10rem 0;
+  margin: 5rem 0 2.5rem 0;
 }
 .project__structure {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-  width: 100%;
+  align-items: center;
 }
 .project:last-child {
-  padding: 20rem 0 40rem 0;
+  padding-bottom: 25rem;
 }
 
 .footer {
   background: radial-gradient(#f6e2d2, #fba055);
-  font-size: 3.5rem;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .footer__naming {
+  margin-top: 10rem;
   color: #fff;
-  font-size: 10rem;
+  font-size: 2.5rem;
   text-align: center;
 }
 .footer__buttons {
   display: flex;
   justify-content: space-between;
-  padding-top: 10rem;
+  padding: 5rem 0;
+}
+.footer__buttons .btn:link,
+.footer__buttons .btn:visited {
+  text-decoration: none;
+  margin: 0rem 2rem;
+  border: 2px solid #fff;
+  padding: 0.3rem;
+  border-radius: 15px;
+  transition: transform 0.4s;
+}
+.footer__buttons .btn:hover,
+.footer__buttons .btn:active {
+  transform: translateY(-5px);
+}
+.footer__buttons .btn img {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 #get-in-touch {
-  font-size: 5rem;
+  font-size: 1.5rem;
   color: #fcb47a;
   border: 4px solid #fcb47a;
   text-decoration: none;
@@ -169,7 +157,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20rem;
+  margin-bottom: 16rem;
 }
 
 @keyframes beats {
@@ -183,43 +171,25 @@ header {
     transform: scale(1);
   }
 }
-.btn:link,
-.btn:visited {
-  text-decoration: none;
-  margin: 0rem 10rem;
-  border: 5px solid #fff;
-  padding: 0.5rem;
-  border-radius: 3rem;
-  transition: transform 0.4s;
-}
-
-.btn:active,
-.btn:hover {
-  transform: translateY(-5px);
-}
-
-.btn img {
-  height: 10rem;
-  width: 10rem;
-}
-
 .project__structure--image img {
-  border-radius: 10rem;
-  width: 80rem;
-  height: 50rem;
+  border-radius: 5rem;
+  width: 25rem;
+  height: 15rem;
   box-shadow: 0rem 2rem 2rem 0 #113b75;
 }
 
 .project__structure--writing {
-  width: 80rem;
-  height: 50rem;
+  width: 25rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 2.5rem;
 }
 
 .right__text {
-  font-size: 3.5rem;
+  font-size: 1.2rem;
   text-align: center;
 }
 
@@ -230,10 +200,12 @@ header {
 }
 
 .right__logos--main1 img {
-  height: 10rem;
+  height: 4.5rem;
   animation: beats 1.5s linear infinite;
+  margin-top: 2rem;
 }
 
 .right__logos--main2 img {
-  height: 7rem;
+  height: 3rem;
+  margin-bottom: 1rem;
 }

@@ -3,17 +3,18 @@ header {
   background: linear-gradient(to bottom, #2f1866, #3761b1);
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  overflow: hidden;
 }
 
 .landing-page__navigation {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   text-align: center;
   margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 .landing-page__navigation a {
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-decoration: none;
   color: #fff;
   padding: 0.4rem 0.8rem;
@@ -25,8 +26,8 @@ header {
 }
 .landing-page__naming {
   text-align: center;
-  font-size: 6rem;
-  margin: 20rem 0;
+  font-size: 7rem;
+  margin: 15rem 0 10rem 0;
 }
 
 .main {
@@ -37,12 +38,13 @@ header {
   justify-content: space-between;
 }
 .main__name {
-  font-size: 4rem;
+  font-size: 4.5rem;
   text-transform: uppercase;
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 .main__paragraph {
-  font-size: 4rem;
+  text-align: center;
+  font-size: 4.5rem;
   width: 60%;
   margin: 15rem 0;
 }
@@ -54,8 +56,9 @@ header {
   align-items: center;
 }
 .main__tech-stack img {
-  width: 9rem;
-  height: 9rem;
+  width: 10rem;
+  height: 10rem;
+  margin: 2.5rem auto;
 }
 
 .projects {
@@ -73,159 +76,168 @@ header {
   font-size: 5rem;
   text-transform: uppercase;
   text-align: center;
-  padding: 5rem 0;
+  padding: 10rem 0;
 }
 .project__structure {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
 }
-
-#footer {
-  background-color: #fcb47a;
-  color: #fff;
-  font-size: 3.5rem;
-  text-align: center;
+.project:last-child {
+  padding: 20rem 0 40rem 0;
 }
 
-@media screen and (max-width: 1570px) {
+.footer {
+  background: radial-gradient(#f6e2d2, #fba055);
+  font-size: 3.5rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer__naming {
+  color: #fff;
+  font-size: 10rem;
+  text-align: center;
+}
+.footer__buttons {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10rem;
+}
+
+@media screen and (max-width: 1070px) {
+  .landing-page__navigation {
+    margin-top: 4.2rem;
+    margin-bottom: 4.2rem;
+  }
   .landing-page__navigation a {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+  .landing-page__naming {
+    font-size: 5.8rem;
+    margin: 12.5rem 0 8.3rem 0;
+  }
+
+  .main__name {
+    font-size: 3.75rem;
+    margin-top: 12.5rem;
+  }
+  .main__paragraph {
+    font-size: 3.2rem;
+    width: 80%;
+    margin: 12.5rem 0;
+  }
+  .main__tech-stack img {
+    width: 8.3rem;
+    height: 8.3rem;
+    margin: 2.1rem auto;
+  }
+
+  .project {
+    padding: 16.6rem 0;
+  }
+  .project__name {
+    font-size: 4.2rem;
+    padding: 8.3rem 0;
+  }
+  .project:last-child {
+    padding: 16.6rem 0 33.3rem 0;
+  }
+
+  .footer {
+    font-size: 2.8rem;
+  }
+  .footer__naming {
+    font-size: 8rem;
+  }
+  .footer__buttons {
+    padding-top: 8rem;
+  }
+}
+@media screen and (max-width: 870px) {
+  .landing-page__navigation {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+  .landing-page__navigation a {
+    font-size: 3rem;
+  }
+  .landing-page__naming {
+    font-size: 5rem;
+  }
+
+  .main__name {
+    font-size: 3rem;
+  }
+  .main__paragraph {
+    text-align: center;
+    font-size: 3rem;
+    width: 90%;
+  }
+  .main__tech-stack {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .main__tech-stack img {
+    width: 7rem;
+    height: 7rem;
+    margin: 2rem auto;
   }
 
   .project {
     padding: 15rem 0;
   }
-}
-@media screen and (max-width: 1370px) {
-  .landing-page__navigation a {
-    font-size: 3rem;
+  .project__name {
+    font-size: 4rem;
+    padding: 8rem 0;
   }
-}
-@media screen and (max-width: 1170px) {
-  .landing-page__navigation a {
+  .project__structure {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .project:last-child {
+    padding: 15rem 0 30rem 0;
+  }
+
+  .footer {
     font-size: 2.5rem;
   }
-}
-@media screen and (max-width: 1070px) {
-  .landing-page__navigation a {
-    font-size: 2rem;
-    padding: 0.3rem 0.6rem;
-    border-bottom: 3px solid transparent;
+  .footer__naming {
+    color: #fff;
+    font-size: 10rem;
+    text-align: center;
   }
-}
-@media screen and (max-width: 870px) {
-  .main__tech-stack {
-    flex-wrap: wrap;
-  }
-  .main__tech-stack img {
-    margin: 0 4.2rem;
-    width: 10rem;
-    height: 10rem;
-  }
-
-  .project {
-    padding: 10rem 0;
-  }
-}
-@media screen and (max-width: 773px) {
-  .main__name {
-    font-size: 3rem;
-    margin-top: 5rem;
-  }
-  .main__paragraph {
-    font-size: 3rem;
-    margin: 5rem 0;
-  }
-  .main__tech-stack img {
-    width: 7.5rem;
-    height: 7.5rem;
-  }
-
-  .project__name {
-    font-size: 3rem;
+  .footer__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10rem;
   }
 }
 @media screen and (max-width: 640px) {
-  .landing-page__navigation a {
-    font-size: 2rem;
-    border-bottom: 2px solid transparent;
-  }
-  .landing-page__naming {
-    font-size: 5rem;
-  }
-  .landing-page__buttons {
-    margin-bottom: 8rem;
-    font-size: 1.6rem;
-  }
-
-  .project {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
-  .project__structure {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 100%;
-  }
-}
-@media screen and (max-width: 573px) {
-  .main__tech-stack img {
-    width: 6rem;
-    height: 6rem;
+  html {
+    font-size: 37.5%;
   }
 }
 @media screen and (max-width: 526px) {
-  .landing-page__navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  html {
+    font-size: 56.25%;
   }
-  .landing-page__navigation a:not(#get-in-touch) {
-    display: none;
+}
+@media screen and (max-width: 360px) {
+  html {
+    font-size: 43.75%;
   }
-  .landing-page__naming {
-    text-align: center;
-    font-size: 3rem;
-    margin: 15rem 0 10rem 0;
-  }
-  .landing-page__buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.4rem;
-  }
-
-  .main__name {
-    font-size: 2.5rem;
-    text-transform: uppercase;
-    margin-top: 8rem;
-  }
-  .main__paragraph {
-    font-size: 2.5rem;
-    width: 90%;
-    margin: 8rem 0;
-  }
-  .main__tech-stack img {
-    width: 5rem;
-    height: 5rem;
-  }
-
-  .project {
-    padding: 10rem 0;
-  }
-  .project__name {
-    font-size: 3rem;
-    padding: 5rem 0;
-  }
-  .project__structure {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #footer {
-    font-size: 2rem;
+}
+@media screen and (max-width: 320px) {
+  html {
+    font-size: 37.5%;
   }
 }
