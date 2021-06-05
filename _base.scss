@@ -23,5 +23,8 @@ body {
 
 // media queries
 
-// @media screen and (max-width: 1070px) {
-// }
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 75%;
+  }
+}
