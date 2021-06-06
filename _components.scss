@@ -1,6 +1,6 @@
 //get in touch button on top
 #get-in-touch {
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   color: #fcb47a;
   border: 4px solid #fcb47a;
   text-decoration: none;
@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0 5rem 0;
+  margin: 2.5rem 0 20rem 0;
   // &:hover {
   //     transform: scale(1.1);
   // }
@@ -36,8 +36,8 @@
 //project
 .project__structure--image img {
   border-radius: 5rem;
-  width: 25rem;
-  height: 15rem;
+  width: 28rem;
+  height: 18rem;
   box-shadow: 0rem 2rem 2rem 0 #113b75;
 }
 
@@ -54,7 +54,7 @@
 }
 
 .right__text {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
@@ -65,33 +65,28 @@
 }
 
 .right__logos--main1 img {
-  height: 4.5rem;
+  height: 5rem;
   animation: beats 1.5s linear infinite;
   margin-top: 2rem;
 }
 
 .right__logos--main2 img {
-  height: 3rem;
+  height: 3.5rem;
   margin-bottom: 1rem;
   // animation: updown 1s linear infinite;
 }
 
 // media queries
-@media screen and (min-width: 1025px) {
-  .project__structure--writing {
-    margin-top: 0rem;
+@media screen and (min-width: 480px) {
+  .right__text {
+    font-size: 1.5rem;
   }
 
-  .right__text {
-    font-size: 0.9rem;
-  }
   .right__logos--main1 img {
-    height: 3.5rem;
-    margin-top: 0rem;
+    height: 5.2rem;
   }
 
   .right__logos--main2 img {
-    height: 2rem;
-    margin-bottom: 0rem;
+    height: 3.7rem;
   }
 }
