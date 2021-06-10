@@ -22,7 +22,42 @@ body {
 }
 @media screen and (min-width: 680px) {
   html {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 880px) {
+  html {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 1023px) {
+  html {
     font-size: 100%;
+  }
+}
+@media screen and (min-width: 1223px) {
+  html {
+    font-size: 112.5%;
+  }
+}
+@media screen and (min-width: 1423px) {
+  html {
+    font-size: 125%;
+  }
+}
+@media screen and (min-width: 1623px) {
+  html {
+    font-size: 137.5%;
+  }
+}
+@media screen and (min-width: 1823px) {
+  html {
+    font-size: 150%;
+  }
+}
+@media screen and (min-width: 2023px) {
+  html {
+    font-size: 162.5%;
   }
 }
 header {
@@ -32,19 +67,20 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100vh;
 }
-
-.landing-page__navigation {
+header .navigation {
   display: none;
 }
-.landing-page__naming {
+header .naming {
   text-align: center;
   font-size: 2rem;
-  margin: 22rem 0 0 0;
+  margin-bottom: 2rem;
 }
 
 .main {
   background: linear-gradient(to bottom, #2e578f, #458eb8);
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,23 +89,25 @@ header {
 .main__name {
   font-size: 1.5rem;
   text-transform: uppercase;
-  margin: 7.5rem 0 2.5rem 0;
   text-align: center;
+  margin: 4rem 0;
 }
 .main__paragraph {
   text-align: center;
   font-size: 1.6rem;
   width: 95%;
-  margin: 2.5rem 0 8rem 0;
+  margin-bottom: 4rem;
 }
 .main__tech-stack {
   width: 100%;
   background-color: #fff;
+}
+.main__tech-stack .tech-stack {
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-.main__tech-stack img {
+.main__tech-stack .tech-stack img {
   width: 3.7rem;
   height: 3.7rem;
   margin: 1rem 0;
@@ -80,17 +118,18 @@ header {
 }
 
 .project {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding: 15rem 0 10rem 0;
+  padding: 5rem 0;
 }
 .project__name {
   font-size: 2rem;
   text-transform: uppercase;
   text-align: center;
-  margin: 5rem 0 2.5rem 0;
+  padding-bottom: 3rem;
 }
 .project__structure {
   display: flex;
@@ -98,37 +137,34 @@ header {
   justify-content: space-evenly;
   align-items: center;
 }
-.project:last-child {
-  padding-bottom: 30rem;
-}
 
 .footer {
   background: radial-gradient(#f6e2d2, #fba055);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .footer__naming {
-  margin-top: 10rem;
   color: #fff;
   font-size: 2.5rem;
   text-align: center;
+  width: 100%;
 }
 .footer__buttons {
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 5rem 0;
+  justify-content: center;
 }
 .footer__buttons .btn:link,
 .footer__buttons .btn:visited {
   text-decoration: none;
-  margin: 0rem 2rem;
   border: 0.2rem solid #fff;
   padding: 0.3rem;
   border-radius: 15px;
   transition: transform 0.4s;
+  margin: 1rem 2rem;
 }
 .footer__buttons .btn:hover,
 .footer__buttons .btn:active {
@@ -139,26 +175,84 @@ header {
   width: 2.5rem;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1023px) {
+  header {
+    justify-content: space-between;
+    height: 100vh;
+  }
+  header .navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    margin: 2.5rem 0;
+  }
+  header .navigation a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 3px solid transparent;
+    transition: border-bottom 0.4s;
+  }
+  header .navigation a:hover {
+    border-bottom: 4px solid #fff;
+  }
+  header .naming {
+    font-size: 3rem;
+  }
+
   .main__name {
     font-size: 1.5rem;
+    margin: 6rem 0 2rem 0;
   }
   .main__paragraph {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    width: 70%;
+    padding: 2rem;
   }
-  .main__tech-stack img {
-    width: 4rem;
-    height: 4rem;
-    margin: 1.2rem 0;
+  .main__tech-stack .tech-stack img {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin: 0.5rem 0;
   }
 
+  .projects {
+    background: radial-gradient(#688dd1, #113b75);
+  }
+
+  .project {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7.5rem 0;
+  }
   .project__name {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
+    padding-bottom: 5rem;
+  }
+  .project__structure {
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+  }
+  .project:first-child {
+    padding-top: 15rem;
+  }
+  .project:last-child {
+    padding-bottom: 15rem;
   }
 
+  .footer__naming {
+    font-size: 4rem;
+  }
+  .footer__buttons .btn:link,
+.footer__buttons .btn:visited {
+    margin: 3rem 4rem;
+  }
   .footer__buttons .btn img {
-    height: 2.7rem;
-    width: 2.7rem;
+    height: 4rem;
+    width: 4rem;
   }
 }
 #get-in-touch {
@@ -176,7 +270,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0 20rem 0;
 }
 
 @keyframes beats {
@@ -198,17 +291,15 @@ header {
 }
 
 .project__structure--writing {
-  width: 25rem;
-  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-top: 2.5rem;
 }
 
 .right__text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  width: 28rem;
   text-align: center;
 }
 
@@ -220,25 +311,48 @@ header {
 
 .right__logos--main1 img {
   height: 5rem;
+  margin: 2rem 0;
   animation: beats 1.5s linear infinite;
-  margin-top: 2rem;
 }
 
 .right__logos--main2 img {
   height: 3.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1023px) {
+  #get-in-touch {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  .project__structure--image img {
+    border-radius: 5rem;
+    width: 30rem;
+    height: 20rem;
+    box-shadow: 0rem 2rem 2rem 0 #113b75;
+  }
+
   .right__text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    width: 30rem;
+    text-align: center;
+  }
+
+  .right__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .right__logos--main1 img {
-    height: 5.2rem;
+    height: 3.5rem;
+    margin: 1rem 0;
+    animation: beats 1.5s linear infinite;
   }
 
   .right__logos--main2 img {
-    height: 3.7rem;
+    height: 2.5rem;
+    margin: 0rem 0;
   }
 }

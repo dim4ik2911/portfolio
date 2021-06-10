@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2.5rem 0 20rem 0;
+  // margin: 2.5rem 0 20rem 0;
   // &:hover {
   //     transform: scale(1.1);
   // }
@@ -42,19 +42,17 @@
 }
 
 .project__structure--writing {
-  width: 25rem;
-  height: 15rem;
-
+  // width: 25rem;
+  // height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
-  margin-top: 2.5rem;
 }
 
 .right__text {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  width: 28rem;
   text-align: center;
 }
 
@@ -66,27 +64,55 @@
 
 .right__logos--main1 img {
   height: 5rem;
+  margin: 2rem 0;
   animation: beats 1.5s linear infinite;
-  margin-top: 2rem;
 }
 
 .right__logos--main2 img {
   height: 3.5rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+
   // animation: updown 1s linear infinite;
 }
 
 // media queries
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 1023px) {
+  //get in touch button on top
+  #get-in-touch {
+    font-size: 2rem;
+    margin-bottom: 5rem;
+  }
+
+  //project
+  .project__structure--image img {
+    border-radius: 5rem;
+    width: 30rem;
+    height: 20rem;
+    box-shadow: 0rem 2rem 2rem 0 #113b75;
+  }
+
   .right__text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    width: 30rem;
+    text-align: center;
+  }
+
+  .right__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .right__logos--main1 img {
-    height: 5.2rem;
+    height: 3.5rem;
+    margin: 1rem 0;
+    animation: beats 1.5s linear infinite;
   }
 
   .right__logos--main2 img {
-    height: 3.7rem;
+    height: 2.5rem;
+    margin: 0rem 0;
+
+    // animation: updown 1s linear infinite;
   }
 }
