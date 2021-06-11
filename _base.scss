@@ -15,6 +15,12 @@ html {
 }
 
 body {
+  //disable text highlighting
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: "Lato", serif;
   line-height: 1.5;
   color: #fff;

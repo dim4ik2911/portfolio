@@ -9,6 +9,11 @@ html {
 }
 
 body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   font-family: "Lato", serif;
   line-height: 1.5;
   color: #fff;
@@ -67,7 +72,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 header .navigation {
   display: none;
@@ -140,7 +145,7 @@ header .naming {
 
 .footer {
   background: radial-gradient(#f6e2d2, #fba055);
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
