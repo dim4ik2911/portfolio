@@ -42,7 +42,8 @@
   opacity: 0.75;
   transition: opacity 0.5s;
 }
-.project__structure--image img:hover {
+.project__structure--image img:hover,
+.project__structure--image img:active {
   opacity: 1;
 }
 
