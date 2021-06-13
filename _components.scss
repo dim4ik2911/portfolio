@@ -39,6 +39,11 @@
   width: 28rem;
   height: 18rem;
   box-shadow: 0rem 2rem 2rem 0 #113b75;
+  opacity: 0.75;
+  transition: opacity 0.5s;
+}
+.project__structure--image img:hover {
+  opacity: 1;
 }
 
 .project__structure--writing {
@@ -70,7 +75,7 @@
 
 .right__logos--main2 img {
   height: 3.5rem;
-  margin: 1rem 0;
+  margin: 3rem 0 1rem 0;
 
   // animation: updown 1s linear infinite;
 }
