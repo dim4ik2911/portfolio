@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" version="1.1" width="512" height="512" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g transform="matrix(0.8,0,0,0.8,51.199997329711806,51.19999999999999)">
+<g xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<polygon points="333.205,34.213 330.799,0 9.545,22.591 39.863,453.709 68.863,451.669 68.863,79.817 420.93,79.817     420.93,478.34 456.185,482.135 502.455,52.438   " fill="#ffffff" data-original="#000000" style="" class=""/>
+	</g>
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<path d="M98.884,109.838V512H390.91V109.838H98.884z M195.09,178.286c18.508,0,33.097,6.755,42.418,18.912l-20.128,17.966    c-5.539-7.025-12.157-11.078-20.668-11.078c-13.239,0-22.154,9.186-22.154,23.64c0,14.454,8.916,23.64,22.154,23.64    c8.511,0,15.13-4.053,20.668-11.078l20.128,17.966c-9.321,12.157-23.911,18.912-42.418,18.912    c-30.395,0-52.684-20.398-52.684-49.442C142.406,198.684,164.696,178.286,195.09,178.286z M342.795,448.571H146.998V418.55    h195.797V448.571z M342.795,395.172H146.998v-30.021h195.797V395.172z M342.795,341.773H146.998v-30.021h195.797V341.773z     M307.756,275.009h-31.341l-39.986-94.562h34.313l22.56,55.251l23.101-55.251h31.339L307.756,275.009z" fill="#ffffff" data-original="#000000" style="" class=""/>
+	</g>
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<g xmlns="http://www.w3.org/2000/svg">
+</g>
+<script> 
+/* 
+ * Chrome token signing extension 
+ * 
+ * This library is free software; you can redistribute it and/or 
+ * modify it under the terms of the GNU Lesser General Public 
+ * License as published by the Free Software Foundation; either 
+ * version 2.1 of the License, or (at your option) any later version. 
+ * 
+ * This library is distributed in the hope that it will be useful, 
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU 
+ * Lesser General Public License for more details. 
+ * 
+ * You should have received a copy of the GNU Lesser General Public 
+ * License along with this library; if not, write to the Free Software 
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA 
+ */ 
+ 
+// Promises 
+var _eid_promises = {}; 
+// Turn the incoming message from extension 
+// into pending Promise resolving 
+window.addEventListener("message", function(event) { 
+    if(event.source !== window) return; 
+    if(event.data.src &amp;&amp; (event.data.src === "eparaksts-background.js")) { 
+        console.log("Page received: "); 
+        console.log(event.data); 
+        // Get the promise 
+        if(event.data.nonce) { 
+            var p = _eid_promises[event.data.nonce]; 
+            // resolve 
+            if(p !== undefined) { 
+                if(event.data.result === "ok") { 
+                    if(event.data.signature !== undefined) { 
+                        p.resolve({hex: event.data.signature}); 
+                    } else if(event.data.version !== undefined &amp;&amp; event.data.extension !== undefined) { 
+                        p.resolve(event.data.version + "/js" + event.data.extension); 
+                    } else if(event.data.cert !== undefined) { 
+                        p.resolve({hex: event.data.cert}); 
+                    } else { 
+                        console.log("No idea how to handle message"); 
+                        console.log(event.data); 
+                    } 
+                } else { 
+                    // reject 
+                    p.reject(new Error(event.data.result)); 
+                } 
+            } else { 
+            	console.log("Undefined promise"); 
+            } 
+            delete _eid_promises[event.data.nonce]; 
+        } else { 
+            console.log("No nonce in event msg"); 
+        } 
+    } 
+}, false); 
+ 
+ 
+function eParakstsTokenSigning() { 
+    function nonce() { 
+        var val = ""; 
+        var hex = "abcdefghijklmnopqrstuvwxyz0123456789"; 
+        for(var i = 0; i &lt; 16; i++) val += hex.charAt(Math.floor(Math.random() * hex.length)); 
+        return val; 
+    } 
+ 
+    function messagePromise(msg) { 
+        return new Promise(function(resolve, reject) { 
+            // amend with necessary metadata 
+            msg["nonce"] = nonce(); 
+            msg["src"] = "eparaksts-page.js"; 
+            // send message 
+            window.postMessage(msg, "*"); 
+            // and store promise callbacks 
+            _eid_promises[msg.nonce] = { 
+                resolve: resolve, 
+                reject: reject 
+            }; 
+        }); 
+    } 
+    this.getCertificate = function(options) { 
+        var msg = {type: "CERT", lang: options.lang, operation: options.operation}; 
+        console.log("getCertificate()"); 
+        return messagePromise(msg); 
+    }; 
+    this.sign = function(cert, hash, options) { 
+        var msg = {type: "SIGN", cert: cert.hex, hash: hash.hex, hashtype: hash.type, lang: options.lang, operation: options.operation}; 
+        console.log("sign()"); 
+        return messagePromise(msg); 
+    }; 
+    this.getVersion = function() { 
+        console.log("getVersion()"); 
+        return messagePromise({ 
+            type: "VERSION" 
+        }); 
+    }; 
+} 
+</script></g></svg>
